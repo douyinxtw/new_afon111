@@ -1,58 +1,70 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новый Афон — Жемчужина Абхазии</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-</head>
-<body>
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="logo">Новый Афон</a>
-      <div class="nav-links">
-        <a href="#monastery">Монастырь</a>
-        <a href="#cave">Пещера</a>
-        <a href="#stalin">Дача Сталина</a>
-      </div>
-    </div>
-  </nav>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <section class="section">
-    <h1 style="text-align:center; font-size:3.5rem; margin-bottom:2rem; color:#1a3c34;">Новый Афон</h1>
-    <p style="text-align:center; font-size:1.3rem; margin-bottom:3rem; max-width:700px; margin-left:auto; margin-right:auto;">Древняя история, священные места и невероятная природа Абхазии</p>
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: url('https://i.imgur.com/WhQ3E6a.jpeg') fixed center/cover no-repeat;
+  min-height: 100vh;
+}
 
-    <!-- Карточки -->
-    <div class="card" id="monastery">
-      <div class="card-img monastery-img"></div>
-      <div class="card-content">
-        <h3>Новоафонский монастырь</h3>
-        <p>Основан в 1875 году. Один из красивейших монастырей Кавказа.</p>
-      </div>
-    </div>
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.9);
+}
 
-    <div class="card" id="cave">
-      <div class="card-img cave-img"></div>
-      <div class="card-content">
-        <h3>Новоафонская пещера</h3>
-        <p>Открыта в 1961 году. Подземное чудо с озёрами и сталактитами.</p>
-      </div>
-    </div>
+.logo { font-size: 1.8rem; font-weight: 700; color: #1a3c34; text-decoration: none; }
 
-    <div class="card" id="stalin">
-      <div class="card-img stalin-img"></div>
-      <div class="card-content">
-        <h3>Дача Сталина</h3>
-        <p>Построена в 1947 году рядом с монастырём. Сейчас — музей.</p>
-      </div>
-    </div>
-  </section>
+.nav-links a { margin-left: 2rem; text-decoration: none; color: #333; font-weight: 500; }
 
-  <footer>
-    <p>Новый Афон — место, где история, вера и природа сливаются воедино.</p>
-  </footer>
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 5%;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+h1 { text-align: center; font-size: 3.5rem; margin-bottom: 1rem; color: #1a3c34; }
+
+.card {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.92);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card-img {
+  flex: 1;
+  min-height: 320px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.monastery-img { background-image: url('https://i.imgur.com/as0N3WE.jpeg'); background-size: cover; background-position: center; }
+.cave-img { background-image: url('https://i.imgur.com/lXxt7i1.jpeg'); background-size: cover; background-position: center; }
+.stalin-img { background-image: url('https://i.imgur.com/RyXXQYP.jpeg'); background-size: cover; background-position: center; }
+
+.card-content { flex: 1; min-width: 300px; }
+.card-content h3 { font-size: 1.9rem; margin-bottom: 0.8rem; color: #1a3c34; }
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #1a3c34;
+  color: #ddd;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .card { flex-direction: column; }
+  h1 { font-size: 2.8rem; }
+}
