@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -6,15 +10,10 @@ body {
   color: #333;
 }
 
-/* Новый фон на весь сайт */
-body {
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), 
-              url('https://i.imgur.com/WhQ3E6a.jpeg') fixed center/cover no-repeat;
-  min-height: 100vh;
-}
-
+/* Hero — маленький и без фона */
 .hero {
-  height: 100vh;
+  height: 60vh; /* уменьшил высоту */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,9 +23,9 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 4.8rem;
+  font-size: 3.8rem;
   margin-bottom: 1rem;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.9);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.8);
 }
 
 .btn {
@@ -40,18 +39,28 @@ body {
   margin-top: 20px;
 }
 
-.btn:hover { background: #b38b4d; transform: translateY(-3px); }
+.btn:hover {
+  background: #b38b4d;
+  transform: translateY(-3px);
+}
 
+/* Section — с твоим фоном */
 .section {
   padding: 100px 5%;
   max-width: 1200px;
   margin: 0 auto;
-  background: rgba(255,255,255,0.9);
+  background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)), 
+              url('https://i.imgur.com/WhQ3E6a.jpeg') center/cover fixed;
   border-radius: 16px;
-  margin-top: 20px;
+  margin-top: -40px; /* немного заходит на hero */
 }
 
-h2 { text-align: center; font-size: 2.8rem; margin-bottom: 3rem; color: #1a3c34; }
+h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: #1a3c34;
+}
 
 .card {
   display: flex;
@@ -59,9 +68,10 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 3rem; color: #1a3c34;
   margin-bottom: 80px;
   align-items: center;
   flex-wrap: wrap;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   padding: 25px;
   border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .card-img {
@@ -75,8 +85,16 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 3rem; color: #1a3c34;
 .cave-img { background-image: url('https://i.imgur.com/lXxt7i1.jpeg'); background-size: cover; background-position: center; }
 .stalin-img { background-image: url('https://i.imgur.com/RyXXQYP.jpeg'); background-size: cover; background-position: center; }
 
-.card-content { flex: 1; min-width: 300px; }
-.card-content h3 { font-size: 2rem; margin-bottom: 1rem; color: #1a3c34; }
+.card-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.card-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1a3c34;
+}
 
 footer {
   text-align: center;
@@ -86,4 +104,7 @@ footer {
   margin-top: 40px;
 }
 
-@media (max-width: 768px) { .card { flex-direction: column; } .hero h1 { font-size: 3rem; } }
+@media (max-width: 768px) {
+  .card { flex-direction: column; }
+  .hero h1 { font-size: 2.8rem; }
+}
