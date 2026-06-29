@@ -12,7 +12,7 @@ body {
 
 /* Hero — маленький и без фона */
 .hero {
-  height: 60vh; /* уменьшил высоту */
+  height: 60vh;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7));
   display: flex;
   align-items: center;
@@ -44,15 +44,13 @@ body {
   transform: translateY(-3px);
 }
 
-/* Section — с твоим фоном */
+/* Section — с фоном без прозрачности */
 .section {
   padding: 100px 5%;
   max-width: 1200px;
   margin: 0 auto;
-  background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)), 
-              url('https://i.imgur.com/WhQ3E6a.jpeg') center/cover fixed;
-  border-radius: 16px;
-  margin-top: -40px; /* немного заходит на hero */
+  background: url('https://i.imgur.com/WhQ3E6a.jpeg') center/cover fixed;
+  margin-top: -40px;
 }
 
 h2 {
@@ -68,7 +66,7 @@ h2 {
   margin-bottom: 80px;
   align-items: center;
   flex-wrap: wrap;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95); /* немного белого для читаемости текста */
   padding: 25px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
